@@ -1,0 +1,15 @@
+/bin/
+/obj/
+/release/
+/verification/
+*.zip
+*.exe
+*.pdb
+editor-error.txt
+*.log
+.env
+.env.*
+*.key
+*.pfx
+.vs/
+.vscode/
