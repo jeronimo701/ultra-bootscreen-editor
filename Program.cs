@@ -22,7 +22,7 @@ internal static class Program
         catch (Exception ex)
         {
             if (args.Length > 0) { File.WriteAllText(Path.Combine(AppContext.BaseDirectory, "editor-error.txt"), ex.ToString()); return 1; }
-            MessageBox.Show(ex.Message, "Ultra Bootscreen Editor"); return 1;
+            MessageBox.Show(ex.Message, AppInfo.Name); return 1;
         }
     }
 }

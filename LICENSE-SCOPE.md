@@ -3,9 +3,9 @@
 С 2026-10-21 [LICENSE.txt](LICENSE.txt), LicenseRef-Jeronimo701-Personal-Use-1.0,
 применяется к следующим собственным материалам Jeronimo701 в этой редакции репозитория:
 
-- `EditorCore.cs`, `MainForm.cs`, `Program.cs`, `SelfTest.cs`;
+- `EditorCore.cs`, `MainForm.cs`, `Program.cs`, `SelfTest.cs`, `AppInfo.cs`;
 - `UltraBootscreenEditor.csproj`, `app.manifest`, `build.ps1`;
-- собственный текст `README.md`, `VALIDATION.md`;
+- собственный текст `README.md`, `VALIDATION.md`, `CHANGELOG.md`;
 - `.gitignore`, `.gitattributes`.
 
 Скомпилированная форма указанных авторских частей также входит в область.

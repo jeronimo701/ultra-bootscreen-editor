@@ -2,13 +2,17 @@
 
 Редактор заставок UltraNX для Windows: открой картинку, выбери кадр, добавь текст и получи BMP в нужном для консоли формате.
 
-**Windows 10/11 x64 · версия 1.0.0 · автономный EXE**
+**Windows 10/11 x64 · версия 1.0.1 · автономный EXE**
 
-[Скачать 1.0.0](https://github.com/jeronimo701/ultra-bootscreen-editor/releases/tag/v1.0.0) · [Подробная инструкция](DETAILS.ru.md) · [Manager для Switch](https://github.com/jeronimo701/ultra-bootscreen-manager) · [Проблемы](https://github.com/jeronimo701/ultra-bootscreen-editor/issues)
+[Скачать 1.0.1](https://github.com/jeronimo701/ultra-bootscreen-editor/releases/tag/v1.0.1) · [Подробная инструкция](DETAILS.ru.md) · [Manager для Switch](https://github.com/jeronimo701/ultra-bootscreen-manager) · [Проблемы](https://github.com/jeronimo701/ultra-bootscreen-editor/issues)
 
-![Окно редактирования заставки](docs/screenshots/editor.png)
+![Окно редактирования заставки](docs/screenshots/editor-1.0.1.png)
 
 *Настоящий интерфейс Windows, снятый встроенным режимом `--capture`. Это редактор на ПК, а не окно на Switch.*
+
+## Что нового в 1.0.1
+
+Причесал код: свёл название и сведения о версии в общий модуль, убрал дублирование создания шрифтов текстовых слоёв. Версия видна в заголовке окна и передаётся при загрузке изображений по ссылке. Возможности редактора и формат BMP сохранены. [История изменений](CHANGELOG.md).
 
 ## Что умеет
 
@@ -20,7 +24,7 @@
 
 ## От картинки до заставки
 
-1. Скачай EXE из [Releases](https://github.com/jeronimo701/ultra-bootscreen-editor/releases/tag/v1.0.0). Устанавливать .NET не нужно.
+1. Скачай EXE из [Releases](https://github.com/jeronimo701/ultra-bootscreen-editor/releases/tag/v1.0.1). Устанавливать .NET не нужно.
 2. Открой `UltraBootscreenEditor.exe`, перетащи картинку в окно.
 3. Подбери кадр мышью и колесом. При желании включи текстовые слои.
 4. Проверь «Предпросмотр» и нажми «Сохранить BMP».

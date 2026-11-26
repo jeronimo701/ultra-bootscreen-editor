@@ -98,7 +98,7 @@ public sealed class MainForm : Form
 
     public MainForm()
     {
-        Text = "Ultra Bootscreen Editor"; Font = new Font("Segoe UI", 10);
+        Text = AppInfo.WindowTitle; Font = new Font("Segoe UI", 10);
         BackColor = Color.FromArgb(19, 22, 29); ForeColor = Color.FromArgb(235, 239, 248);
         ClientSize = new Size(1280, 820); MinimumSize = new Size(1000, 700); StartPosition = FormStartPosition.CenterScreen;
         AutoScaleMode = AutoScaleMode.Dpi; AllowDrop = true; KeyPreview = true;

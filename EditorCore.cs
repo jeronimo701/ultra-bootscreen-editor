@@ -14,6 +14,7 @@ public sealed class TextLayer
     public Color Color { get; set; } = Color.White;
     public PointF Position { get; set; } = new(32, 28);
     public TextLayer Clone() => (TextLayer)MemberwiseClone();
+    internal Font CreateFont() => new(FontName, Size, Bold ? FontStyle.Bold : FontStyle.Regular, GraphicsUnit.Pixel);
 }
 
 public sealed class Document : IDisposable
@@ -61,13 +62,13 @@ public sealed class Document : IDisposable
     }
     public static RectangleF TextBounds(Graphics g, TextLayer layer)
     {
-        using var font = new Font(layer.FontName, layer.Size, layer.Bold ? FontStyle.Bold : FontStyle.Regular, GraphicsUnit.Pixel);
+        using var font = layer.CreateFont();
         return new(layer.Position, g.MeasureString(layer.Text, font, 1280, StringFormat.GenericTypographic));
     }
     private static void DrawText(Graphics g, TextLayer layer)
     {
         if (!layer.Enabled || string.IsNullOrEmpty(layer.Text)) return;
-        using var font = new Font(layer.FontName, layer.Size, layer.Bold ? FontStyle.Bold : FontStyle.Regular, GraphicsUnit.Pixel);
+        using var font = layer.CreateFont();
         using var brush = new SolidBrush(layer.Color);
         using var shadow = new SolidBrush(Color.FromArgb(180, Color.Black));
         g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
@@ -134,7 +135,7 @@ public static class ImageFiles
             throw new ArgumentException("Нужна прямая HTTP/HTTPS-ссылка на изображение.");
         using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(45));
         using var client = new HttpClient();
-        client.DefaultRequestHeaders.UserAgent.ParseAdd("UltraBootscreenEditor/1.0");
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(AppInfo.UserAgent);
         using var response = await client.GetAsync(uri, HttpCompletionOption.ResponseHeadersRead, timeout.Token);
         response.EnsureSuccessStatusCode();
         if (response.Content.Headers.ContentLength > MaxBytes) throw new InvalidDataException("Картинка больше 80 МБ.");
