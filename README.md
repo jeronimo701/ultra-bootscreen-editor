@@ -1,3 +1,5 @@
+![ultra-bootscreen-editor — обложка проекта](docs/banner.svg)
+
 # Ultra Bootscreen Editor
 
 Редактор заставок UltraNX для Windows: открой картинку, выбери кадр, добавь текст и получи BMP в нужном для консоли формате.
